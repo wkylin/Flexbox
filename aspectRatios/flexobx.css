@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.main-header,
+.name,
+nav,
+.main-nav,
+.main-nav li,
+.main-nav li a {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 100%;
+    justify-content: center;
+}
+
+.pics {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.pics img {
+    max-width: 100%;
+}
+
+.name {
+    background-color: yellow;
+}
+.main-nav li {
+    background-color: red;
+}
+
+li a:hover {
+    color: blue;
+    background-color: pink;
+}
+
+.main-nav a {
+    color: white;
+}
+
+@media all and (min-width: 567px) {
+    .pics {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .pics img {
+        height: 200px;
+    }
+}

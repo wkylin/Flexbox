@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aspectratio {
+            position: relative;
+            height: 0;
+            width: 100%;
+
+            /* visual helper */
+            outline: 2px solid blue;
+        }
+
+        .aspectratio[data-ratio="16:9"] {
+            padding-top: 56.25%;
+        }
+
+        .aspectratio[data-ratio="4:3"] {
+            padding-top: 75%;
+        }
+
+        .aspectratio>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            /* visualize the box */
+            background: hotpink;
+
+            /* center my children */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* other styles, not directly required for the demo */
+        @keyframes change {
+            0% {
+                width: 50vw;
+            }
+
+            100% {
+                width: 80vw;
+            }
+        }
+
+        main {
+            width: 50vw;
+            margin: 0 auto;
+            animation: change 5s linear alternate infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="aspectratio" data-ratio="16:9">
+            <div>
+                <p>16:9</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

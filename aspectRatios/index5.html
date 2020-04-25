@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling Image Caption</title>
+    <style>
+        .caption {
+            display: flex;
+            max-width: 800px;
+            flex-flow: row nowrap;
+            align-items: center;
+            border: 1px solid;
+            margin: auto;
+        }
+
+        .caption img,
+        figcaption {
+            flex: 1 1 50%;
+            margin: 1em;
+        }
+
+        .caption img {
+            max-width: 350px;
+            /*actual image width*/
+            height: auto;
+            /* maintain aspect ratio*/
+            margin-right: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <figure class="caption">
+            <img src="http://via.placeholder.com/350x250" width="350" height="250" alt="">
+            <figcaption>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s...
+            </figcaption>
+        </figure>
+    </div>
+
+</body>
+
+</html>
